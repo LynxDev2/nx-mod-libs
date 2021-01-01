@@ -31,6 +31,7 @@ target_include_directories(exlaunch
 install( 
   TARGETS exlaunch
   EXPORT NXModLibsTargets
+  COMPONENT exlaunch
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )

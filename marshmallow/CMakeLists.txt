@@ -36,6 +36,7 @@ target_link_libraries(marshmallow PUBLIC NXModLibs::exlaunch)
 install(
   TARGETS marshmallow
   EXPORT NXModLibsTargets
+  COMPONENT marsmallow
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )

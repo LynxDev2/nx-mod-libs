@@ -1,5 +1,11 @@
 include(${CMAKE_CURRENT_LIST_DIR}/Utils.cmake)
 
+# The first two checks are there to avoid warnings from the function from being displayed multiple times
+if(CMAKE_TOOLCHAIN_FILE AND NOT CMAKE_SYSTEM_NAME AND NOT TOOLCHAIN_DISABLE_MOD_CHECKS)
+    find_utils_for_mods()
+endif()
+
+
 set(CMAKE_SYSTEM_NAME Generic-ELF)
 set(CMAKE_SYSTEM_PROCESSOR aarch64)
 set(CMAKE_CROSSCOMPILING 1)
@@ -10,7 +16,6 @@ set(CMAKE_C_STANDARD 17)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_EXECUTABLE_SUFFIX ".elf")
 set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS FALSE)
-
 
 if(CMAKE_HOST_WIN32)
     set(EXE_EXT ".exe")

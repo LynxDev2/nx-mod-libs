@@ -1,2 +1,5 @@
 @PACKAGE_INIT@
-include( "${CMAKE_CURRENT_LIST_DIR}/NXModLibsTargets.cmake" )
+include("${CMAKE_CURRENT_LIST_DIR}/NXModLibsTargets.cmake")
+
+set(NXModToolchain_path "${CMAKE_CURRENT_LIST_DIR}/NXModToolchain.cmake")
+set(NXModUtils_path "${CMAKE_CURRENT_LIST_DIR}/GlobalModUtils.cmake")
