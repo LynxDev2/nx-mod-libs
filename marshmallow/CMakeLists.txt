@@ -2,7 +2,6 @@ add_library(marshmallow STATIC)
 add_library(NXModLibs::marshmallow ALIAS marshmallow)
 
 target_include_directories(marshmallow
-    SYSTEM
     PUBLIC
         # Current source dir when building the lib and lib include dir when using the lib
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>

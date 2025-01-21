@@ -22,7 +22,6 @@ target_sources(exlaunch
 )
 
 target_include_directories(exlaunch
-    SYSTEM
     PUBLIC
         # Current source dir for projects that come with the lib and the library include dir for projects that use an installed lib
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
