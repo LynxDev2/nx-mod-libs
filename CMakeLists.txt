@@ -1,9 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+
 project(NXModLibs)
 
-include(cmake/Utils.cmake)
 include(GNUInstallDirs)
-
-set_compiler_and_flags()
 
 add_subdirectory(exlaunch)
 add_subdirectory(marshmallow)
